@@ -25,3 +25,20 @@ Cookies e sessions são mecanismos utilizados no PHP para armazenar informaçõe
 
 #### Justificativa:
  - O uso combinado de cookies e sessions é importante porque cada um resolve um tipo de problema dentro do sistema. As sessions garantem mais segurança, já que armazenam os dados no servidor, sendo ideais para informações sensíveis como login e carrinho de compras. Por outro lado, os cookies oferecem praticidade, pois ficam no navegador e permitem manter preferências do usuário mesmo após ele sair do site. Assim, utilizar os dois de forma adequada melhora tanto a proteção dos dados quanto a experiência do usuário, tornando o sistema mais eficiente e confiável.
+
+### Exercício 3 — Pergunta de investigação:
+
+Ao executar o arquivo `teste.php` pela primeira vez no navegador, apareceu a mensagem **“Cookie ainda não disponível.”**
+Isso acontece porque o comando `setcookie("contador", "1", time()+3600);` apenas envia a instrução para o navegador criar o cookie, mas ele ainda não fica disponível na mesma execução do script.
+
+Depois de atualizar a página, apareceu a mensagem **“Valor do cookie: 1”**.
+Nessa etapa, o navegador já havia salvo o cookie e o enviou de volta ao servidor na nova requisição, permitindo que o PHP acessasse o valor por meio de `$_COOKIE["contador"]`.
+
+Ao abrir as ferramentas do navegador (`F12`) e acessar a aba de cookies, foi possível visualizar o cookie chamado **contador**, com o valor **1** e tempo de expiração de aproximadamente **1 hora**.
+
+Depois de limpar os cookies do site e atualizar novamente, a mensagem voltou a ser **“Cookie ainda não disponível.”**, pois o cookie foi apagado do navegador.
+Ao atualizar mais uma vez, ele reapareceu com o valor **1**, repetindo o mesmo processo inicial.
+
+O cookie não aparece imediatamente na primeira execução porque ele só fica disponível na **próxima requisição feita pelo navegador**.
+Ou seja, primeiro o servidor envia o cookie, o navegador salva, e somente no próximo carregamento da página ele retorna esse valor ao PHP.
+
