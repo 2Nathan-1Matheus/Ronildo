@@ -6,7 +6,7 @@ Desenvolvimento de Sistemas
 ## Turma
 2°C¹
 ## Autores
-Nathan Nabas e Matheus
+Nathan Nabas, Matheus e Nathan Gabriel
 
 ### Exercício 1 — Pergunta conceitual
 
