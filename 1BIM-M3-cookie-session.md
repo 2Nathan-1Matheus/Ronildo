@@ -46,22 +46,22 @@ Ou seja, primeiro o servidor envia o cookie, o navegador salva, e somente no pr�
 
 As sessions são preferidas na autenticação de usuários porque oferecem mais segurança, controle e confiabilidade em relação aos cookies.
 
-**Segurança**
+**Segurança:**
 
 Nas sessions, os dados ficam armazenados no servidor, e o navegador guarda apenas um ID de sessão. Assim, informações sensíveis não ficam expostas ao usuário.
 Já os cookies ficam no navegador e podem ser acessados ou alterados.
 
-**Manipulação de dados**
+**Manipulação de dados:**
 
 Sessions permitem armazenar dados mais complexos e são facilmente controladas no servidor.
 Cookies têm limitações e exigem mais cuidados para evitar alterações indevidas.
 
-**Controle**
+**Controle:**
 
 Sessions podem ser encerradas com session_destroy() e expiram automaticamente após um tempo de inatividade.
 Cookies podem continuar ativos mesmo após o usuário sair, dependendo da configuração.
 
-**Riscos dos cookies**
+**Riscos dos cookies:**
 
 Usar apenas cookies pode causar problemas como:
 
