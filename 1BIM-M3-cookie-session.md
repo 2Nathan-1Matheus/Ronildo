@@ -64,7 +64,6 @@ Cookies podem continuar ativos mesmo após o usuário sair, dependendo da config
 **Riscos dos cookies:**
 
 Usar apenas cookies pode causar problemas como:
-
 alteração de dados pelo usuário
 roubo de cookies
 exposição de informações sensíveis
