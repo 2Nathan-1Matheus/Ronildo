@@ -42,11 +42,11 @@ Ao atualizar mais uma vez, ele reapareceu com o valor **1**, repetindo o mesmo p
 O cookie não aparece imediatamente na primeira execução porque ele só fica disponível na **próxima requisição feita pelo navegador**.
 Ou seja, primeiro o servidor envia o cookie, o navegador salva, e somente no próximo carregamento da página ele retorna esse valor ao PHP.
 
-#### Exercício 4 — Por que sessions são preferidas na autenticação
+### Exercício 4 — Por que sessions são preferidas na autenticação
 
 As sessions são preferidas na autenticação de usuários porque oferecem mais segurança, controle e confiabilidade em relação aos cookies.
 
-**Segurança***
+**Segurança**
 
 Nas sessions, os dados ficam armazenados no servidor, e o navegador guarda apenas um ID de sessão. Assim, informações sensíveis não ficam expostas ao usuário.
 Já os cookies ficam no navegador e podem ser acessados ou alterados.
