@@ -68,7 +68,7 @@ alteração de dados pelo usuário
 roubo de cookies
 exposição de informações sensíveis
 
-**Conclusão**
+**Conclusão:**
 
 As sessions são mais seguras e eficientes para autenticação, pois mantêm os dados protegidos no servidor. Os cookies devem ser usados apenas como complemento ou para informações não sensíveis.
 
