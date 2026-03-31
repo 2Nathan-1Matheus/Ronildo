@@ -44,19 +44,32 @@ Ou seja, primeiro o servidor envia o cookie, o navegador salva, e somente no pr�
 
 #### Exercício 4 — Por que sessions são preferidas na autenticação
 
-Sessions são mais usadas para login por vários motivos:
+As sessions são preferidas na autenticação de usuários porque oferecem mais segurança, controle e confiabilidade em relação aos cookies.
 
-**Segurança**
-Os dados ficam no servidor
-O usuário não consegue alterar diretamente
+**Segurança***
+
+Nas sessions, os dados ficam armazenados no servidor, e o navegador guarda apenas um ID de sessão. Assim, informações sensíveis não ficam expostas ao usuário.
+Já os cookies ficam no navegador e podem ser acessados ou alterados.
+
 **Manipulação de dados**
-Mais fácil controlar e atualizar informações
-Pode armazenar estruturas complexas (arrays, objetos)
-**Riscos de usar apenas cookies**
-O usuário pode modificar os dados
-Pode haver roubo de cookies (ex: ataque de sessão)
-Informações sensíveis ficariam expostas
 
-**Conclusão:**
-Sessions são mais seguras e confiáveis para autenticação, enquanto cookies devem ser usados com cuidado e, de preferência, apenas para dados não sensíveis.
+Sessions permitem armazenar dados mais complexos e são facilmente controladas no servidor.
+Cookies têm limitações e exigem mais cuidados para evitar alterações indevidas.
+
+**Controle**
+
+Sessions podem ser encerradas com session_destroy() e expiram automaticamente após um tempo de inatividade.
+Cookies podem continuar ativos mesmo após o usuário sair, dependendo da configuração.
+
+**Riscos dos cookies**
+
+Usar apenas cookies pode causar problemas como:
+
+alteração de dados pelo usuário
+roubo de cookies
+exposição de informações sensíveis
+
+**Conclusão**
+
+As sessions são mais seguras e eficientes para autenticação, pois mantêm os dados protegidos no servidor. Os cookies devem ser usados apenas como complemento ou para informações não sensíveis.
 
